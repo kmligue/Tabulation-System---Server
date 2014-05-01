@@ -2,7 +2,7 @@ Tabulation-System - Server
 ==========================
 
 ## License
-==========================
+
 The MIT License (MIT)
 
 Copyright (c) 2014 kelvin martin ligue
