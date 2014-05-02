@@ -40,14 +40,15 @@ Partial Class Candidate
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.dgv_candidates = New System.Windows.Forms.DataGridView()
-        Me.btn_delete = New System.Windows.Forms.Button()
-        Me.btn_add = New System.Windows.Forms.Button()
-        Me.OpenFileDialog = New System.Windows.Forms.OpenFileDialog()
         Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dgv_candidate_number = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dgv_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dgv_sponsor = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dgv_info = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.image = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btn_delete = New System.Windows.Forms.Button()
+        Me.btn_add = New System.Windows.Forms.Button()
+        Me.OpenFileDialog = New System.Windows.Forms.OpenFileDialog()
         Me.Panel1.SuspendLayout()
         CType(Me.pb_image, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgv_candidates, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -239,37 +240,13 @@ Partial Class Candidate
         Me.dgv_candidates.AllowUserToDeleteRows = False
         Me.dgv_candidates.AllowUserToOrderColumns = True
         Me.dgv_candidates.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv_candidates.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.dgv_candidate_number, Me.dgv_name, Me.dgv_sponsor, Me.dgv_info})
+        Me.dgv_candidates.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id, Me.dgv_candidate_number, Me.dgv_name, Me.dgv_sponsor, Me.dgv_info, Me.image})
         Me.dgv_candidates.Location = New System.Drawing.Point(320, 12)
         Me.dgv_candidates.Name = "dgv_candidates"
         Me.dgv_candidates.ReadOnly = True
         Me.dgv_candidates.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgv_candidates.Size = New System.Drawing.Size(944, 483)
         Me.dgv_candidates.TabIndex = 4
-        '
-        'btn_delete
-        '
-        Me.btn_delete.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_delete.Location = New System.Drawing.Point(883, 501)
-        Me.btn_delete.Name = "btn_delete"
-        Me.btn_delete.Size = New System.Drawing.Size(93, 40)
-        Me.btn_delete.TabIndex = 2
-        Me.btn_delete.Text = "Delete"
-        Me.btn_delete.UseVisualStyleBackColor = True
-        '
-        'btn_add
-        '
-        Me.btn_add.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_add.Location = New System.Drawing.Point(487, 501)
-        Me.btn_add.Name = "btn_add"
-        Me.btn_add.Size = New System.Drawing.Size(93, 40)
-        Me.btn_add.TabIndex = 2
-        Me.btn_add.Text = "Add"
-        Me.btn_add.UseVisualStyleBackColor = True
-        '
-        'OpenFileDialog
-        '
-        Me.OpenFileDialog.Filter = "JPG |*.jpg | PNG |*.png"
         '
         'id
         '
@@ -305,6 +282,37 @@ Partial Class Candidate
         Me.dgv_info.Name = "dgv_info"
         Me.dgv_info.ReadOnly = True
         Me.dgv_info.Width = 250
+        '
+        'image
+        '
+        Me.image.HeaderText = "Image"
+        Me.image.Name = "image"
+        Me.image.ReadOnly = True
+        Me.image.Visible = False
+        '
+        'btn_delete
+        '
+        Me.btn_delete.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_delete.Location = New System.Drawing.Point(883, 501)
+        Me.btn_delete.Name = "btn_delete"
+        Me.btn_delete.Size = New System.Drawing.Size(93, 40)
+        Me.btn_delete.TabIndex = 2
+        Me.btn_delete.Text = "Delete"
+        Me.btn_delete.UseVisualStyleBackColor = True
+        '
+        'btn_add
+        '
+        Me.btn_add.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_add.Location = New System.Drawing.Point(487, 501)
+        Me.btn_add.Name = "btn_add"
+        Me.btn_add.Size = New System.Drawing.Size(93, 40)
+        Me.btn_add.TabIndex = 2
+        Me.btn_add.Text = "Add"
+        Me.btn_add.UseVisualStyleBackColor = True
+        '
+        'OpenFileDialog
+        '
+        Me.OpenFileDialog.Filter = "JPG |*.jpg | PNG |*.png"
         '
         'Candidate
         '
@@ -359,4 +367,5 @@ Partial Class Candidate
     Friend WithEvents dgv_name As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents dgv_sponsor As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents dgv_info As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents image As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

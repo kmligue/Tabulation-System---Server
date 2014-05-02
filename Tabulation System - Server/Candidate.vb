@@ -21,7 +21,7 @@
             'populate datagridview
             While reader.Read
                 If reader.HasRows Then
-                    row = New String() {reader(0), reader(2), reader(3), reader(4), reader(5)}
+                    row = New String() {reader(0), reader(2), reader(3), reader(4), reader(5), reader(1)}
                     dgv_candidates.Rows.Add(row)
                 End If
             End While
@@ -35,6 +35,7 @@
     Private Sub btn_add_Click(sender As Object, e As EventArgs) Handles btn_add.Click
         setControlEnabled(False, True, False, False, False, True, False, True, True, True, True, True)
 
+        pb_image.Image = Nothing
         dgv_candidates.Enabled = False
     End Sub
 
@@ -55,7 +56,6 @@
 
     Private Sub btn_cancel_Click(sender As Object, e As EventArgs) Handles btn_cancel.Click
         setControlEnabled(True, False, False, True, True, False, False, False, False, False, False, False)
-        pb_image.Image = Nothing
         txt_candidate_no.Text = ""
         txt_image.Text = ""
         txt_info.Text = ""
@@ -124,7 +124,6 @@
                 MsgBox("Successfully saved!")
                 setControlEnabled(True, False, False, True, True, False, False, False, False, False, False, True)
 
-                pb_image.Image = Nothing
                 txt_candidate_no.Text = ""
                 txt_image.Text = ""
                 txt_info.Text = ""
@@ -242,7 +241,6 @@
                 MsgBox("Successfully updated!")
                 setControlEnabled(True, False, False, True, True, False, False, False, False, False, False, False)
 
-                pb_image.Image = Nothing
                 txt_candidate_no.Text = ""
                 txt_image.Text = ""
                 txt_info.Text = ""
@@ -280,8 +278,13 @@
                 MsgBox(ex.Message)
             Finally
                 Connect.constring.Close()
+                pb_image.Image = Nothing
                 populateDGV()
             End Try
         End If
+    End Sub
+
+    Private Sub dgv_candidates_SelectionChanged(sender As Object, e As EventArgs) Handles dgv_candidates.SelectionChanged
+        pb_image.Image = System.Drawing.Bitmap.FromFile(Application.StartupPath & "\Images\" & dgv_candidates.SelectedCells(5).Value)
     End Sub
 End Class
