@@ -16,4 +16,10 @@
         Judge.MdiParent = Me.MdiParent
         Judge.Show()
     End Sub
+
+    Private Sub EventToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EventToolStripMenuItem.Click
+        Event_Form.Owner = Me
+        Event_Form.MdiParent = Me.MdiParent
+        Event_Form.Show()
+    End Sub
 End Class
