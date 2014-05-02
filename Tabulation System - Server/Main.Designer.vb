@@ -27,6 +27,7 @@ Partial Class Main
         Me.strip_candidate = New System.Windows.Forms.ToolStripMenuItem()
         Me.JudgeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EventToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CriteriaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -41,7 +42,7 @@ Partial Class Main
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.strip_candidate, Me.JudgeToolStripMenuItem, Me.EventToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.strip_candidate, Me.JudgeToolStripMenuItem, Me.EventToolStripMenuItem, Me.CriteriaToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
@@ -63,6 +64,12 @@ Partial Class Main
         Me.EventToolStripMenuItem.Name = "EventToolStripMenuItem"
         Me.EventToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.EventToolStripMenuItem.Text = "Event"
+        '
+        'CriteriaToolStripMenuItem
+        '
+        Me.CriteriaToolStripMenuItem.Name = "CriteriaToolStripMenuItem"
+        Me.CriteriaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CriteriaToolStripMenuItem.Text = "Criteria"
         '
         'Main
         '
@@ -89,4 +96,5 @@ Partial Class Main
     Friend WithEvents strip_candidate As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents JudgeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents EventToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CriteriaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

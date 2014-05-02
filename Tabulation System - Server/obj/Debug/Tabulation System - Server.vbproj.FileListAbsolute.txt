@@ -13,3 +13,4 @@ E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation Sys
 E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\obj\Debug\Tabulation_System___Server.Candidate.resources
 E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\obj\Debug\Tabulation_System___Server.Judge.resources
 E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\obj\Debug\Tabulation_System___Server.Event_Form.resources
+E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\obj\Debug\Tabulation_System___Server.Criteria.resources

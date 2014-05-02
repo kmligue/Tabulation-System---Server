@@ -22,4 +22,10 @@
         Event_Form.MdiParent = Me.MdiParent
         Event_Form.Show()
     End Sub
+
+    Private Sub CriteriaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CriteriaToolStripMenuItem.Click
+        Criteria.Owner = Me
+        Criteria.MdiParent = Me.MdiParent
+        Criteria.Show()
+    End Sub
 End Class
