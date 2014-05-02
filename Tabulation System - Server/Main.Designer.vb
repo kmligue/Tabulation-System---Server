@@ -38,6 +38,7 @@ Partial Class Main
         Me.cb_category = New System.Windows.Forms.ComboBox()
         Me.lbl_event = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.TopToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -54,7 +55,7 @@ Partial Class Main
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.strip_candidate, Me.JudgeToolStripMenuItem, Me.EventToolStripMenuItem, Me.CriteriaToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.strip_candidate, Me.JudgeToolStripMenuItem, Me.EventToolStripMenuItem, Me.CriteriaToolStripMenuItem, Me.TopToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
@@ -94,31 +95,31 @@ Partial Class Main
         'GownToolStripMenuItem
         '
         Me.GownToolStripMenuItem.Name = "GownToolStripMenuItem"
-        Me.GownToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.GownToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
         Me.GownToolStripMenuItem.Text = "Gown"
         '
         'TalentToolStripMenuItem
         '
         Me.TalentToolStripMenuItem.Name = "TalentToolStripMenuItem"
-        Me.TalentToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TalentToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
         Me.TalentToolStripMenuItem.Text = "Talent"
         '
         'InterviewToolStripMenuItem
         '
         Me.InterviewToolStripMenuItem.Name = "InterviewToolStripMenuItem"
-        Me.InterviewToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.InterviewToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
         Me.InterviewToolStripMenuItem.Text = "Interview"
         '
         'SwimwearToolStripMenuItem
         '
         Me.SwimwearToolStripMenuItem.Name = "SwimwearToolStripMenuItem"
-        Me.SwimwearToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SwimwearToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
         Me.SwimwearToolStripMenuItem.Text = "Swimwear"
         '
         'FinalToolStripMenuItem
         '
         Me.FinalToolStripMenuItem.Name = "FinalToolStripMenuItem"
-        Me.FinalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.FinalToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
         Me.FinalToolStripMenuItem.Text = "Final"
         '
         'DataGridView
@@ -143,13 +144,13 @@ Partial Class Main
         '
         'lbl_event
         '
-        Me.lbl_event.AutoSize = True
         Me.lbl_event.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_event.Location = New System.Drawing.Point(12, 17)
+        Me.lbl_event.Location = New System.Drawing.Point(593, 20)
         Me.lbl_event.Name = "lbl_event"
-        Me.lbl_event.Size = New System.Drawing.Size(84, 31)
+        Me.lbl_event.Size = New System.Drawing.Size(195, 31)
         Me.lbl_event.TabIndex = 5
         Me.lbl_event.Text = "Event"
+        Me.lbl_event.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel1
         '
@@ -160,6 +161,12 @@ Partial Class Main
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1388, 64)
         Me.Panel1.TabIndex = 6
+        '
+        'TopToolStripMenuItem
+        '
+        Me.TopToolStripMenuItem.Name = "TopToolStripMenuItem"
+        Me.TopToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TopToolStripMenuItem.Text = "Top"
         '
         'Main
         '
@@ -181,7 +188,6 @@ Partial Class Main
         Me.MenuStrip1.PerformLayout()
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -202,4 +208,5 @@ Partial Class Main
     Friend WithEvents cb_category As System.Windows.Forms.ComboBox
     Friend WithEvents lbl_event As System.Windows.Forms.Label
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents TopToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

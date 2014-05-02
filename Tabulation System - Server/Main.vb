@@ -40,6 +40,13 @@
 
         DataGridView.Columns.Clear()
 
+        Dim candidateNo As New DataGridViewTextBoxColumn
+        candidateNo.HeaderText = "Candidate No."
+        candidateNo.Name = "candidate_no"
+        candidateNo.ReadOnly = True
+        candidateNo.Width = 200
+        DataGridView.Columns.Add(candidateNo)
+
         Dim candidate As New DataGridViewTextBoxColumn
         candidate.HeaderText = "Candidate"
         candidate.Name = "candidate"
@@ -70,7 +77,7 @@
 
             While reader.Read
                 If reader.HasRows Then
-                    cb_category.Items.Add(reader(0))
+                    cb_category.Items.Add(reader(0).ToString.Substring(0, 1).ToUpper & reader(0).ToString.Substring(1, reader(0).ToString.Length - 1))
                 End If
             End While
         Catch ex As Exception
@@ -105,6 +112,13 @@
 
         DataGridView.Columns.Clear()
 
+        Dim candidateNo As New DataGridViewTextBoxColumn
+        candidateNo.HeaderText = "Candidate No."
+        candidateNo.Name = "candidate_no"
+        candidateNo.ReadOnly = True
+        candidateNo.Width = 200
+        DataGridView.Columns.Add(candidateNo)
+
         Dim candidate As New DataGridViewTextBoxColumn
         candidate.HeaderText = "Candidate"
         candidate.Name = "candidate"
@@ -124,7 +138,7 @@
         Dim sql As String
 
         If cb_category.SelectedItem = "Overall" Then
-            Sql = "SELECT candidate, score FROM v_gown_overall ORDER BY score DESC"
+            sql = "SELECT number, candidate, score FROM v_gown_overall ORDER BY score DESC"
 
             Try
                 Connect.constring.Open()
@@ -134,7 +148,7 @@
 
                 While reader.Read
                     If reader.HasRows Then
-                        row = New String() {reader(0), Format(reader(1), "0.00")}
+                        row = New String() {reader(0), reader(1), Format(reader(2), "0.00")}
 
                         DataGridView.Rows.Add(row)
                     End If
@@ -147,7 +161,7 @@
         Else
             Dim judgeName As String = cb_category.SelectedItem
 
-            Sql = "SELECT candidate, score FROM v_gown WHERE judge = '" & judgeName & "'"
+            sql = "SELECT number, candidate, score FROM v_gown WHERE judge = '" & judgeName & "'"
 
             Try
                 Connect.constring.Open()
@@ -157,7 +171,7 @@
 
                 While reader.Read
                     If reader.HasRows Then
-                        row = New String() {reader(0), Format(reader(1), "0.00")}
+                        row = New String() {reader(0), reader(1), Format(reader(2), "0.00")}
 
                         DataGridView.Rows.Add(row)
                     End If
@@ -175,7 +189,7 @@
         Dim sql As String
 
         If cb_category.SelectedItem = "Overall" Then
-            sql = "SELECT candidate, score FROM v_talent_overall ORDER BY score DESC"
+            sql = "SELECT number, candidate, score FROM v_talent_overall ORDER BY score DESC"
 
             Try
                 Connect.constring.Open()
@@ -185,7 +199,7 @@
 
                 While reader.Read
                     If reader.HasRows Then
-                        row = New String() {reader(0), Format(reader(1), "0.00")}
+                        row = New String() {reader(0), reader(1), Format(reader(2), "0.00")}
 
                         DataGridView.Rows.Add(row)
                     End If
@@ -198,7 +212,7 @@
         Else
             Dim judgeName As String = cb_category.SelectedItem
 
-            sql = "SELECT candidate, score FROM v_talent WHERE judge = '" & judgeName & "'"
+            sql = "SELECT number, candidate, score FROM v_talent WHERE judge = '" & judgeName & "'"
 
             Try
                 Connect.constring.Open()
@@ -208,7 +222,7 @@
 
                 While reader.Read
                     If reader.HasRows Then
-                        row = New String() {reader(0), Format(reader(1), "0.00")}
+                        row = New String() {reader(0), reader(1), Format(reader(2), "0.00")}
 
                         DataGridView.Rows.Add(row)
                     End If
@@ -226,7 +240,7 @@
         Dim sql As String
 
         If cb_category.SelectedItem = "Overall" Then
-            sql = "SELECT candidate, score FROM v_interview_overall ORDER BY score DESC"
+            sql = "SELECT number, candidate, score FROM v_interview_overall ORDER BY score DESC"
 
             Try
                 Connect.constring.Open()
@@ -236,7 +250,7 @@
 
                 While reader.Read
                     If reader.HasRows Then
-                        row = New String() {reader(0), Format(reader(1), "0.00")}
+                        row = New String() {reader(0), reader(1), Format(reader(2), "0.00")}
 
                         DataGridView.Rows.Add(row)
                     End If
@@ -249,7 +263,7 @@
         Else
             Dim judgeName As String = cb_category.SelectedItem
 
-            sql = "SELECT candidate, score FROM v_interview WHERE judge = '" & judgeName & "'"
+            sql = "SELECT number, candidate, score FROM v_interview WHERE judge = '" & judgeName & "'"
 
             Try
                 Connect.constring.Open()
@@ -259,7 +273,7 @@
 
                 While reader.Read
                     If reader.HasRows Then
-                        row = New String() {reader(0), Format(reader(1), "0.00")}
+                        row = New String() {reader(0), reader(1), Format(reader(2), "0.00")}
 
                         DataGridView.Rows.Add(row)
                     End If
@@ -277,7 +291,7 @@
         Dim sql As String
 
         If cb_category.SelectedItem = "Overall" Then
-            sql = "SELECT candidate, score FROM v_swimwear_overall ORDER BY score DESC"
+            sql = "SELECT number, candidate, score FROM v_swimwear_overall ORDER BY score DESC"
 
             Try
                 Connect.constring.Open()
@@ -287,7 +301,7 @@
 
                 While reader.Read
                     If reader.HasRows Then
-                        row = New String() {reader(0), Format(reader(1), "0.00")}
+                        row = New String() {reader(0), reader(1), Format(reader(2), "0.00")}
 
                         DataGridView.Rows.Add(row)
                     End If
@@ -300,7 +314,7 @@
         Else
             Dim judgeName As String = cb_category.SelectedItem
 
-            sql = "SELECT candidate, score FROM v_swimwear WHERE judge = '" & judgeName & "'"
+            sql = "SELECT number, candidate, score FROM v_swimwear WHERE judge = '" & judgeName & "'"
 
             Try
                 Connect.constring.Open()
@@ -310,7 +324,7 @@
 
                 While reader.Read
                     If reader.HasRows Then
-                        row = New String() {reader(0), Format(reader(1), "0.00")}
+                        row = New String() {reader(0), reader(1), Format(reader(2), "0.00")}
 
                         DataGridView.Rows.Add(row)
                     End If
@@ -328,7 +342,7 @@
         Dim sql As String
 
         If cb_category.SelectedItem = "Overall" Then
-            sql = "SELECT candidate, score FROM v_final_overall ORDER BY score DESC"
+            sql = "SELECT number, candidate, score FROM v_final_overall ORDER BY score DESC"
 
             Try
                 Connect.constring.Open()
@@ -338,7 +352,7 @@
 
                 While reader.Read
                     If reader.HasRows Then
-                        row = New String() {reader(0), Format(reader(1), "0.00")}
+                        row = New String() {reader(0), reader(1), Format(reader(2), "0.00")}
 
                         DataGridView.Rows.Add(row)
                     End If
@@ -351,7 +365,7 @@
         Else
             Dim judgeName As String = cb_category.SelectedItem
 
-            sql = "SELECT candidate, score FROM v_final WHERE judge = '" & judgeName & "'"
+            sql = "SELECT number, candidate, score FROM v_final WHERE judge = '" & judgeName & "'"
 
             Try
                 Connect.constring.Open()
@@ -361,7 +375,7 @@
 
                 While reader.Read
                     If reader.HasRows Then
-                        row = New String() {reader(0), Format(reader(1), "0.00")}
+                        row = New String() {reader(0), reader(1), Format(reader(2), "0.00")}
 
                         DataGridView.Rows.Add(row)
                     End If
@@ -380,6 +394,13 @@
         populateCbCategory()
 
         DataGridView.Columns.Clear()
+
+        Dim candidateNo As New DataGridViewTextBoxColumn
+        candidateNo.HeaderText = "Candidate No."
+        candidateNo.Name = "candidate_no"
+        candidateNo.ReadOnly = True
+        candidateNo.Width = 200
+        DataGridView.Columns.Add(candidateNo)
 
         Dim candidate As New DataGridViewTextBoxColumn
         candidate.HeaderText = "Candidate"
@@ -401,6 +422,13 @@
 
         DataGridView.Columns.Clear()
 
+        Dim candidateNo As New DataGridViewTextBoxColumn
+        candidateNo.HeaderText = "Candidate No."
+        candidateNo.Name = "candidate_no"
+        candidateNo.ReadOnly = True
+        candidateNo.Width = 200
+        DataGridView.Columns.Add(candidateNo)
+
         Dim candidate As New DataGridViewTextBoxColumn
         candidate.HeaderText = "Candidate"
         candidate.Name = "candidate"
@@ -420,6 +448,13 @@
         populateCbCategory()
 
         DataGridView.Columns.Clear()
+
+        Dim candidateNo As New DataGridViewTextBoxColumn
+        candidateNo.HeaderText = "Candidate No."
+        candidateNo.Name = "candidate_no"
+        candidateNo.ReadOnly = True
+        candidateNo.Width = 200
+        DataGridView.Columns.Add(candidateNo)
 
         Dim candidate As New DataGridViewTextBoxColumn
         candidate.HeaderText = "Candidate"
