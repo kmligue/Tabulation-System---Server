@@ -284,7 +284,7 @@
         End If
     End Sub
 
-    Private Sub dgv_candidates_SelectionChanged(sender As Object, e As EventArgs) Handles dgv_candidates.SelectionChanged
+    Private Sub dgv_candidates_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv_candidates.CellClick
         pb_image.Image = System.Drawing.Bitmap.FromFile(Application.StartupPath & "\Images\" & dgv_candidates.SelectedCells(5).Value)
     End Sub
 End Class

@@ -1,16 +1,16 @@
+E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\obj\Debug\Tabulation System - Server.exe
+E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\obj\Debug\Tabulation_System___Server.Candidate.resources
+E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\obj\Debug\Tabulation_System___Server.Criteria.resources
+E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\obj\Debug\Tabulation_System___Server.Event_Form.resources
+E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\obj\Debug\Tabulation_System___Server.Judge.resources
+E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\obj\Debug\Tabulation_System___Server.Login.resources
+E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\obj\Debug\Tabulation_System___Server.Main.resources
+E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\obj\Debug\Tabulation_System___Server.Resources.resources
+E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\obj\Debug\Tabulation System - Server.vbproj.GenerateResource.Cache
+E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\obj\Debug\Tabulation System - Server.pdb
 E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\bin\Debug\Tabulation System - Server.exe.config
 E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\bin\Debug\Tabulation System - Server.exe
 E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\bin\Debug\Tabulation System - Server.pdb
 E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\bin\Debug\Tabulation System - Server.xml
-E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\obj\Debug\Tabulation_System___Server.Resources.resources
-E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\obj\Debug\Tabulation System - Server.vbproj.GenerateResource.Cache
-E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\obj\Debug\Tabulation System - Server.exe
-E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\obj\Debug\Tabulation System - Server.xml
-E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\obj\Debug\Tabulation System - Server.pdb
 E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\obj\Debug\Tabulation System - Server.vbprojResolveAssemblyReference.cache
-E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\obj\Debug\Tabulation_System___Server.Login.resources
-E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\obj\Debug\Tabulation_System___Server.Main.resources
-E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\obj\Debug\Tabulation_System___Server.Candidate.resources
-E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\obj\Debug\Tabulation_System___Server.Judge.resources
-E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\obj\Debug\Tabulation_System___Server.Event_Form.resources
-E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\obj\Debug\Tabulation_System___Server.Criteria.resources
+E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\obj\Debug\Tabulation System - Server.xml
