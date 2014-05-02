@@ -30,16 +30,16 @@ Partial Class Criteria
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txt_score = New System.Windows.Forms.TextBox()
         Me.dgv_criteria = New System.Windows.Forms.DataGridView()
-        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.event_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.description = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.score = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btn_add = New System.Windows.Forms.Button()
         Me.btn_save = New System.Windows.Forms.Button()
         Me.btn_update = New System.Windows.Forms.Button()
         Me.btn_edit = New System.Windows.Forms.Button()
         Me.btn_delete = New System.Windows.Forms.Button()
         Me.btn_cancel = New System.Windows.Forms.Button()
+        Me.id = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.event_name = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.description = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.score = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         CType(Me.dgv_criteria, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -89,6 +89,7 @@ Partial Class Criteria
         '
         'cb_event
         '
+        Me.cb_event.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cb_event.Enabled = False
         Me.cb_event.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_event.FormattingEnabled = True
@@ -129,31 +130,6 @@ Partial Class Criteria
         Me.dgv_criteria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgv_criteria.Size = New System.Drawing.Size(944, 483)
         Me.dgv_criteria.TabIndex = 7
-        '
-        'id
-        '
-        Me.id.HeaderText = "Id"
-        Me.id.Name = "id"
-        Me.id.ReadOnly = True
-        Me.id.Visible = False
-        '
-        'event_name
-        '
-        Me.event_name.HeaderText = "Event"
-        Me.event_name.Name = "event_name"
-        Me.event_name.ReadOnly = True
-        '
-        'description
-        '
-        Me.description.HeaderText = "Description"
-        Me.description.Name = "description"
-        Me.description.ReadOnly = True
-        '
-        'score
-        '
-        Me.score.HeaderText = "Score"
-        Me.score.Name = "score"
-        Me.score.ReadOnly = True
         '
         'btn_add
         '
@@ -218,6 +194,33 @@ Partial Class Criteria
         Me.btn_cancel.Text = "Cancel"
         Me.btn_cancel.UseVisualStyleBackColor = True
         '
+        'id
+        '
+        Me.id.HeaderText = "Id"
+        Me.id.Name = "id"
+        Me.id.ReadOnly = True
+        Me.id.Visible = False
+        '
+        'event_name
+        '
+        Me.event_name.HeaderText = "Event"
+        Me.event_name.Name = "event_name"
+        Me.event_name.ReadOnly = True
+        Me.event_name.Width = 150
+        '
+        'description
+        '
+        Me.description.HeaderText = "Description"
+        Me.description.Name = "description"
+        Me.description.ReadOnly = True
+        Me.description.Width = 350
+        '
+        'score
+        '
+        Me.score.HeaderText = "Score"
+        Me.score.Name = "score"
+        Me.score.ReadOnly = True
+        '
         'Criteria
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -252,14 +255,14 @@ Partial Class Criteria
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents dgv_criteria As System.Windows.Forms.DataGridView
-    Friend WithEvents id As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents event_name As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents description As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents score As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents btn_add As System.Windows.Forms.Button
     Friend WithEvents btn_save As System.Windows.Forms.Button
     Friend WithEvents btn_update As System.Windows.Forms.Button
     Friend WithEvents btn_edit As System.Windows.Forms.Button
     Friend WithEvents btn_delete As System.Windows.Forms.Button
     Friend WithEvents btn_cancel As System.Windows.Forms.Button
+    Friend WithEvents id As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents event_name As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents description As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents score As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
