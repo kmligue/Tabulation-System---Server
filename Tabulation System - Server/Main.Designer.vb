@@ -28,6 +28,7 @@ Partial Class Main
         Me.JudgeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EventToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CriteriaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TopToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InquiryToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GownToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TalentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -38,7 +39,6 @@ Partial Class Main
         Me.cb_category = New System.Windows.Forms.ComboBox()
         Me.lbl_event = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.TopToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -49,7 +49,7 @@ Partial Class Main
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.InquiryToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1412, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1008, 24)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -84,6 +84,12 @@ Partial Class Main
         Me.CriteriaToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
         Me.CriteriaToolStripMenuItem.Text = "Criteria"
         Me.CriteriaToolStripMenuItem.Visible = False
+        '
+        'TopToolStripMenuItem
+        '
+        Me.TopToolStripMenuItem.Name = "TopToolStripMenuItem"
+        Me.TopToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
+        Me.TopToolStripMenuItem.Text = "Top"
         '
         'InquiryToolStripMenuItem
         '
@@ -129,7 +135,7 @@ Partial Class Main
         Me.DataGridView.Location = New System.Drawing.Point(12, 95)
         Me.DataGridView.Name = "DataGridView"
         Me.DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView.Size = New System.Drawing.Size(1388, 727)
+        Me.DataGridView.Size = New System.Drawing.Size(984, 600)
         Me.DataGridView.TabIndex = 3
         '
         'cb_category
@@ -137,15 +143,15 @@ Partial Class Main
         Me.cb_category.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cb_category.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cb_category.FormattingEnabled = True
-        Me.cb_category.Location = New System.Drawing.Point(1064, 20)
+        Me.cb_category.Location = New System.Drawing.Point(767, 20)
         Me.cb_category.Name = "cb_category"
-        Me.cb_category.Size = New System.Drawing.Size(310, 28)
+        Me.cb_category.Size = New System.Drawing.Size(204, 28)
         Me.cb_category.TabIndex = 4
         '
         'lbl_event
         '
         Me.lbl_event.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_event.Location = New System.Drawing.Point(593, 20)
+        Me.lbl_event.Location = New System.Drawing.Point(396, 20)
         Me.lbl_event.Name = "lbl_event"
         Me.lbl_event.Size = New System.Drawing.Size(195, 31)
         Me.lbl_event.TabIndex = 5
@@ -159,21 +165,15 @@ Partial Class Main
         Me.Panel1.Controls.Add(Me.lbl_event)
         Me.Panel1.Location = New System.Drawing.Point(12, 25)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1388, 64)
+        Me.Panel1.Size = New System.Drawing.Size(984, 64)
         Me.Panel1.TabIndex = 6
-        '
-        'TopToolStripMenuItem
-        '
-        Me.TopToolStripMenuItem.Name = "TopToolStripMenuItem"
-        Me.TopToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.TopToolStripMenuItem.Text = "Top"
         '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Control
-        Me.ClientSize = New System.Drawing.Size(1412, 834)
+        Me.ClientSize = New System.Drawing.Size(1008, 729)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.DataGridView)
         Me.Controls.Add(Me.MenuStrip1)

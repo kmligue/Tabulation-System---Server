@@ -116,7 +116,7 @@ Partial Class Candidate
         '
         Me.btn_save.Enabled = False
         Me.btn_save.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_save.Location = New System.Drawing.Point(586, 501)
+        Me.btn_save.Location = New System.Drawing.Point(464, 501)
         Me.btn_save.Name = "btn_save"
         Me.btn_save.Size = New System.Drawing.Size(93, 40)
         Me.btn_save.TabIndex = 2
@@ -126,7 +126,7 @@ Partial Class Candidate
         'btn_edit
         '
         Me.btn_edit.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_edit.Location = New System.Drawing.Point(685, 501)
+        Me.btn_edit.Location = New System.Drawing.Point(563, 501)
         Me.btn_edit.Name = "btn_edit"
         Me.btn_edit.Size = New System.Drawing.Size(93, 40)
         Me.btn_edit.TabIndex = 2
@@ -137,7 +137,7 @@ Partial Class Candidate
         '
         Me.btn_cancel.Enabled = False
         Me.btn_cancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_cancel.Location = New System.Drawing.Point(982, 501)
+        Me.btn_cancel.Location = New System.Drawing.Point(860, 501)
         Me.btn_cancel.Name = "btn_cancel"
         Me.btn_cancel.Size = New System.Drawing.Size(93, 40)
         Me.btn_cancel.TabIndex = 2
@@ -148,7 +148,7 @@ Partial Class Candidate
         '
         Me.btn_update.Enabled = False
         Me.btn_update.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_update.Location = New System.Drawing.Point(784, 501)
+        Me.btn_update.Location = New System.Drawing.Point(662, 501)
         Me.btn_update.Name = "btn_update"
         Me.btn_update.Size = New System.Drawing.Size(93, 40)
         Me.btn_update.TabIndex = 2
@@ -245,7 +245,7 @@ Partial Class Candidate
         Me.dgv_candidates.Name = "dgv_candidates"
         Me.dgv_candidates.ReadOnly = True
         Me.dgv_candidates.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgv_candidates.Size = New System.Drawing.Size(944, 483)
+        Me.dgv_candidates.Size = New System.Drawing.Size(676, 483)
         Me.dgv_candidates.TabIndex = 4
         '
         'id
@@ -293,7 +293,7 @@ Partial Class Candidate
         'btn_delete
         '
         Me.btn_delete.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_delete.Location = New System.Drawing.Point(883, 501)
+        Me.btn_delete.Location = New System.Drawing.Point(761, 501)
         Me.btn_delete.Name = "btn_delete"
         Me.btn_delete.Size = New System.Drawing.Size(93, 40)
         Me.btn_delete.TabIndex = 2
@@ -303,7 +303,7 @@ Partial Class Candidate
         'btn_add
         '
         Me.btn_add.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_add.Location = New System.Drawing.Point(487, 501)
+        Me.btn_add.Location = New System.Drawing.Point(365, 501)
         Me.btn_add.Name = "btn_add"
         Me.btn_add.Size = New System.Drawing.Size(93, 40)
         Me.btn_add.TabIndex = 2
@@ -312,13 +312,13 @@ Partial Class Candidate
         '
         'OpenFileDialog
         '
-        Me.OpenFileDialog.Filter = "JPG |*.jpg | PNG |*.png"
+        Me.OpenFileDialog.Filter = "All Files |*.*| JPG |*.jpg| PNG |*.png"
         '
         'Candidate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1275, 744)
+        Me.ClientSize = New System.Drawing.Size(1008, 729)
         Me.Controls.Add(Me.dgv_candidates)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btn_add)

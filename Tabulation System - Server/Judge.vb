@@ -6,11 +6,13 @@
     End Sub
 
     Private Sub btn_add_Click(sender As Object, e As EventArgs) Handles btn_add.Click
-        setControlEnabled(False, True, False, False, False, True, True, True)
+        setControlEnabled(False, True, False, False, False, True, True, True, True, True)
         dgv_judge.Enabled = False
+        radio_login.Checked = False
+        radio_logout.Checked = True
     End Sub
 
-    Private Sub setControlEnabled(ByVal add As Boolean, ByVal save As Boolean, ByVal update As Boolean, ByVal edit As Boolean, ByVal delete As Boolean, ByVal cancel As Boolean, ByVal username As Boolean, ByVal password As Boolean)
+    Private Sub setControlEnabled(ByVal add As Boolean, ByVal save As Boolean, ByVal update As Boolean, ByVal edit As Boolean, ByVal delete As Boolean, ByVal cancel As Boolean, ByVal username As Boolean, ByVal password As Boolean, ByVal login As Boolean, ByVal logout As Boolean)
         btn_add.Enabled = add
         btn_save.Enabled = save
         btn_update.Enabled = update
@@ -19,13 +21,17 @@
         btn_cancel.Enabled = cancel
         txt_password.Enabled = password
         txt_username.Enabled = username
+        radio_login.Enabled = login
+        radio_logout.Enabled = logout
     End Sub
 
     Private Sub btn_cancel_Click(sender As Object, e As EventArgs) Handles btn_cancel.Click
-        setControlEnabled(True, False, False, True, True, False, False, False)
+        setControlEnabled(True, False, False, True, True, False, False, False, False, False)
         txt_password.Text = ""
         txt_username.Text = ""
         dgv_judge.Enabled = True
+        radio_login.Checked = False
+        radio_logout.Checked = False
     End Sub
 
     Private Sub btn_edit_Click(sender As Object, e As EventArgs) Handles btn_edit.Click
@@ -40,7 +46,7 @@
 
         dgv_judge.Enabled = False
 
-        Dim sql As String = "SELECT username, password FROM t_judge WHERE id = '" & id & "'"
+        Dim sql As String = "SELECT username, password, status FROM t_judge WHERE id = '" & id & "'"
 
         Try
             Connect.constring.Open()
@@ -50,9 +56,17 @@
 
             While reader.Read
                 If reader.HasRows Then
+                    Dim status As Boolean = False
+
+                    If reader(2) = "1" Then
+                        status = True
+                    End If
+
                     txt_password.Text = reader(1)
                     txt_username.Text = reader(0)
-                    setControlEnabled(False, False, True, False, False, True, True, True)
+                    radio_login.Checked = status
+                    radio_logout.Checked = Not status
+                    setControlEnabled(False, False, True, False, False, True, True, True, True, True)
                 End If
             End While
 
@@ -65,8 +79,6 @@
     End Sub
 
     Private Sub btn_save_Click(sender As Object, e As EventArgs) Handles btn_save.Click
-        Dim sql As String = "INSERT INTO t_judge(username, password, status) VALUES('" & txt_username.Text & "', '" & txt_password.Text & "', 0)"
-
         If txt_password.Text = "" And txt_username.Text = "" Then
             MsgBox("Please fill up fields with(*)")
             Exit Sub
@@ -77,11 +89,21 @@
             Exit Sub
         End If
 
+        Dim status As Integer = 0
+
+        If radio_login.Checked = True Then
+            status = 1
+        End If
+
+        Dim sql As String = "INSERT INTO t_judge(username, password, status) VALUES('" & txt_username.Text & "', '" & txt_password.Text & "', '" & status & "')"
+
         If Functions.sqlInsert(sql) = True Then
             MsgBox("Successfully saved!")
-            setControlEnabled(True, False, False, True, True, False, False, False)
+            setControlEnabled(True, False, False, True, True, False, False, False, False, False)
             txt_password.Text = ""
             txt_username.Text = ""
+            radio_login.Checked = False
+            radio_logout.Checked = False
             populateDGV()
             dgv_judge.Enabled = True
         End If
@@ -138,14 +160,22 @@
             Exit Sub
         End If
 
-        Dim sql As String = "UPDATE t_judge SET username = '" & txt_username.Text & "', password = '" & txt_password.Text & "'"
+        Dim status As Integer = 0
+
+        If radio_login.Checked = True Then
+            status = 1
+        End If
+
+        Dim sql As String = "UPDATE t_judge SET username = '" & txt_username.Text & "', password = '" & txt_password.Text & "', status = '" & status & "' WHERE id = '" & id & "'"
 
         If Functions.sqlInsert(sql) = True Then
             MsgBox("Successfully updated!")
             dgv_judge.Enabled = True
             txt_password.Text = ""
             txt_username.Text = ""
-            setControlEnabled(True, False, False, True, True, False, False, False)
+            radio_login.Checked = False
+            radio_logout.Checked = False
+            setControlEnabled(True, False, False, True, True, False, False, False, False, False)
             populateDGV()
         End If
     End Sub
