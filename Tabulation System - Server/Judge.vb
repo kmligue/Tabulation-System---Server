@@ -208,4 +208,8 @@
         End If
 
     End Sub
+
+    Private Sub btn_refresh_Click(sender As Object, e As EventArgs) Handles btn_refresh.Click
+        populateDGV()
+    End Sub
 End Class

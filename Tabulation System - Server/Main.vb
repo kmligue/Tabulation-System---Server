@@ -526,7 +526,9 @@
 
     Private Sub FinalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FinalToolStripMenuItem.Click
         lbl_event.Text = "Final"
+        cb_category.Enabled = True
         populateCbCategory()
+        DataGridView.Rows.Clear()
     End Sub
 
     Private Sub TopToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TopToolStripMenuItem.Click

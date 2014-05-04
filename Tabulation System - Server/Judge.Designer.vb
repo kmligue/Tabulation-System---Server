@@ -23,8 +23,11 @@ Partial Class Judge
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.radio_logout = New System.Windows.Forms.RadioButton()
+        Me.radio_login = New System.Windows.Forms.RadioButton()
         Me.txt_username = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txt_password = New System.Windows.Forms.TextBox()
         Me.dgv_judge = New System.Windows.Forms.DataGridView()
@@ -38,9 +41,7 @@ Partial Class Judge
         Me.btn_edit = New System.Windows.Forms.Button()
         Me.btn_delete = New System.Windows.Forms.Button()
         Me.btn_cancel = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.radio_login = New System.Windows.Forms.RadioButton()
-        Me.radio_logout = New System.Windows.Forms.RadioButton()
+        Me.btn_refresh = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.dgv_judge, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -60,6 +61,32 @@ Partial Class Judge
         Me.Panel1.Size = New System.Drawing.Size(290, 248)
         Me.Panel1.TabIndex = 4
         '
+        'radio_logout
+        '
+        Me.radio_logout.AutoSize = True
+        Me.radio_logout.Enabled = False
+        Me.radio_logout.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.radio_logout.Location = New System.Drawing.Point(82, 192)
+        Me.radio_logout.Name = "radio_logout"
+        Me.radio_logout.Size = New System.Drawing.Size(77, 24)
+        Me.radio_logout.TabIndex = 2
+        Me.radio_logout.TabStop = True
+        Me.radio_logout.Text = "Logout"
+        Me.radio_logout.UseVisualStyleBackColor = True
+        '
+        'radio_login
+        '
+        Me.radio_login.AutoSize = True
+        Me.radio_login.Enabled = False
+        Me.radio_login.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.radio_login.Location = New System.Drawing.Point(82, 162)
+        Me.radio_login.Name = "radio_login"
+        Me.radio_login.Size = New System.Drawing.Size(66, 24)
+        Me.radio_login.TabIndex = 2
+        Me.radio_login.TabStop = True
+        Me.radio_login.Text = "Login"
+        Me.radio_login.UseVisualStyleBackColor = True
+        '
         'txt_username
         '
         Me.txt_username.Enabled = False
@@ -78,6 +105,16 @@ Partial Class Judge
         Me.Label4.Size = New System.Drawing.Size(93, 20)
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "Username:*"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(3, 140)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(66, 20)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Status:*"
         '
         'Label2
         '
@@ -140,7 +177,7 @@ Partial Class Judge
         'btn_add
         '
         Me.btn_add.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_add.Location = New System.Drawing.Point(362, 501)
+        Me.btn_add.Location = New System.Drawing.Point(313, 501)
         Me.btn_add.Name = "btn_add"
         Me.btn_add.Size = New System.Drawing.Size(93, 40)
         Me.btn_add.TabIndex = 6
@@ -151,7 +188,7 @@ Partial Class Judge
         '
         Me.btn_save.Enabled = False
         Me.btn_save.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_save.Location = New System.Drawing.Point(461, 501)
+        Me.btn_save.Location = New System.Drawing.Point(412, 501)
         Me.btn_save.Name = "btn_save"
         Me.btn_save.Size = New System.Drawing.Size(93, 40)
         Me.btn_save.TabIndex = 7
@@ -162,7 +199,7 @@ Partial Class Judge
         '
         Me.btn_update.Enabled = False
         Me.btn_update.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_update.Location = New System.Drawing.Point(659, 501)
+        Me.btn_update.Location = New System.Drawing.Point(610, 501)
         Me.btn_update.Name = "btn_update"
         Me.btn_update.Size = New System.Drawing.Size(93, 40)
         Me.btn_update.TabIndex = 8
@@ -172,7 +209,7 @@ Partial Class Judge
         'btn_edit
         '
         Me.btn_edit.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_edit.Location = New System.Drawing.Point(560, 501)
+        Me.btn_edit.Location = New System.Drawing.Point(511, 501)
         Me.btn_edit.Name = "btn_edit"
         Me.btn_edit.Size = New System.Drawing.Size(93, 40)
         Me.btn_edit.TabIndex = 9
@@ -182,7 +219,7 @@ Partial Class Judge
         'btn_delete
         '
         Me.btn_delete.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_delete.Location = New System.Drawing.Point(758, 501)
+        Me.btn_delete.Location = New System.Drawing.Point(709, 501)
         Me.btn_delete.Name = "btn_delete"
         Me.btn_delete.Size = New System.Drawing.Size(93, 40)
         Me.btn_delete.TabIndex = 10
@@ -193,54 +230,29 @@ Partial Class Judge
         '
         Me.btn_cancel.Enabled = False
         Me.btn_cancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_cancel.Location = New System.Drawing.Point(857, 501)
+        Me.btn_cancel.Location = New System.Drawing.Point(808, 501)
         Me.btn_cancel.Name = "btn_cancel"
         Me.btn_cancel.Size = New System.Drawing.Size(93, 40)
         Me.btn_cancel.TabIndex = 11
         Me.btn_cancel.Text = "Cancel"
         Me.btn_cancel.UseVisualStyleBackColor = True
         '
-        'Label1
+        'btn_refresh
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(3, 140)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(66, 20)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Status:*"
-        '
-        'radio_login
-        '
-        Me.radio_login.AutoSize = True
-        Me.radio_login.Enabled = False
-        Me.radio_login.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.radio_login.Location = New System.Drawing.Point(82, 162)
-        Me.radio_login.Name = "radio_login"
-        Me.radio_login.Size = New System.Drawing.Size(66, 24)
-        Me.radio_login.TabIndex = 2
-        Me.radio_login.TabStop = True
-        Me.radio_login.Text = "Login"
-        Me.radio_login.UseVisualStyleBackColor = True
-        '
-        'radio_logout
-        '
-        Me.radio_logout.AutoSize = True
-        Me.radio_logout.Enabled = False
-        Me.radio_logout.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.radio_logout.Location = New System.Drawing.Point(82, 192)
-        Me.radio_logout.Name = "radio_logout"
-        Me.radio_logout.Size = New System.Drawing.Size(77, 24)
-        Me.radio_logout.TabIndex = 2
-        Me.radio_logout.TabStop = True
-        Me.radio_logout.Text = "Logout"
-        Me.radio_logout.UseVisualStyleBackColor = True
+        Me.btn_refresh.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_refresh.Location = New System.Drawing.Point(907, 501)
+        Me.btn_refresh.Name = "btn_refresh"
+        Me.btn_refresh.Size = New System.Drawing.Size(93, 40)
+        Me.btn_refresh.TabIndex = 6
+        Me.btn_refresh.Text = "Refresh"
+        Me.btn_refresh.UseVisualStyleBackColor = True
         '
         'Judge
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 729)
+        Me.Controls.Add(Me.btn_refresh)
         Me.Controls.Add(Me.btn_add)
         Me.Controls.Add(Me.btn_save)
         Me.Controls.Add(Me.btn_update)
@@ -281,4 +293,5 @@ Partial Class Judge
     Friend WithEvents radio_logout As System.Windows.Forms.RadioButton
     Friend WithEvents radio_login As System.Windows.Forms.RadioButton
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents btn_refresh As System.Windows.Forms.Button
 End Class
