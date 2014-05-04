@@ -14,3 +14,4 @@ E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation Sys
 E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\bin\Debug\Tabulation System - Server.xml
 E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\obj\Debug\Tabulation System - Server.vbprojResolveAssemblyReference.cache
 E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\obj\Debug\Tabulation System - Server.xml
+E:\My files\Projects\Tabulation System\Tabulation System - Server\Tabulation System - Server\obj\Debug\Tabulation_System___Server.Elimination.resources

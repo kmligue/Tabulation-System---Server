@@ -86,6 +86,12 @@
     <Compile Include="Criteria.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Elimination.Designer.vb">
+      <DependentUpon>Elimination.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Elimination.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Event_Form.Designer.vb">
       <DependentUpon>Event_Form.vb</DependentUpon>
     </Compile>
@@ -135,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Criteria.resx">
       <DependentUpon>Criteria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Elimination.resx">
+      <DependentUpon>Elimination.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Event_Form.resx">
       <DependentUpon>Event_Form.vb</DependentUpon>

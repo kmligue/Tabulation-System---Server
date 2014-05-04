@@ -38,6 +38,7 @@
         lbl_event.Text = "Gown"
         populateCbCategory()
 
+        cb_category.Enabled = True
         DataGridView.Columns.Clear()
 
         Dim candidateNo As New DataGridViewTextBoxColumn
@@ -110,6 +111,7 @@
         lbl_event.Text = "Talent"
         populateCbCategory()
 
+        cb_category.Enabled = True
         DataGridView.Columns.Clear()
 
         Dim candidateNo As New DataGridViewTextBoxColumn
@@ -337,11 +339,59 @@
         End If
     End Sub
 
+    Private Sub populateDGVOverall()
+        Dim row As String()
+        Dim sql As String = "SELECT number, candidate, score FROM v_top ORDER BY score DESC"
+
+        Try
+            Connect.constring.Open()
+            Functions.com.Connection = Connect.constring
+            Functions.com.CommandText = sql
+            Functions.reader = Functions.com.ExecuteReader
+
+            While reader.Read
+                If reader.HasRows Then
+                    row = New String() {reader(0), reader(1), Format(reader(2), "0.00")}
+
+                    DataGridView.Rows.Add(row)
+                End If
+            End While
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Connect.constring.Close()
+        End Try
+    End Sub
+
     Private Sub populateDGVFinal()
         Dim row As String()
         Dim sql As String
 
         If cb_category.SelectedItem = "Overall" Then
+
+            cb_category.Enabled = True
+            DataGridView.Columns.Clear()
+
+            Dim candidateNo As New DataGridViewTextBoxColumn
+            candidateNo.HeaderText = "Candidate No."
+            candidateNo.Name = "candidate_no"
+            candidateNo.ReadOnly = True
+            candidateNo.Width = 200
+            DataGridView.Columns.Add(candidateNo)
+
+            Dim candidate As New DataGridViewTextBoxColumn
+            candidate.HeaderText = "Candidate"
+            candidate.Name = "candidate"
+            candidate.ReadOnly = True
+            candidate.Width = 350
+            DataGridView.Columns.Add(candidate)
+
+            Dim score As New DataGridViewTextBoxColumn
+            score.HeaderText = "Score"
+            score.Name = "score"
+            score.ReadOnly = True
+            DataGridView.Columns.Add(score)
+
             sql = "SELECT number, candidate, score FROM v_final_overall ORDER BY score DESC"
 
             Try
@@ -365,7 +415,36 @@
         Else
             Dim judgeName As String = cb_category.SelectedItem
 
-            sql = "SELECT number, candidate, score FROM v_final WHERE judge = '" & judgeName & "'"
+            cb_category.Enabled = True
+            DataGridView.Columns.Clear()
+
+            Dim candidateNo As New DataGridViewTextBoxColumn
+            candidateNo.HeaderText = "Candidate No."
+            candidateNo.Name = "candidate_no"
+            candidateNo.ReadOnly = True
+            candidateNo.Width = 200
+            DataGridView.Columns.Add(candidateNo)
+
+            Dim candidate As New DataGridViewTextBoxColumn
+            candidate.HeaderText = "Candidate"
+            candidate.Name = "candidate"
+            candidate.ReadOnly = True
+            candidate.Width = 350
+            DataGridView.Columns.Add(candidate)
+
+            Dim score1 As New DataGridViewTextBoxColumn
+            score1.HeaderText = "Score 1"
+            score1.Name = "score1"
+            score1.ReadOnly = True
+            DataGridView.Columns.Add(score1)
+
+            Dim score2 As New DataGridViewTextBoxColumn
+            score2.HeaderText = "Score 2"
+            score2.Name = "score2"
+            score2.ReadOnly = True
+            DataGridView.Columns.Add(score2)
+
+            sql = "SELECT number, candidate, score1, score2 FROM v_final WHERE judge = '" & judgeName & "'"
 
             Try
                 Connect.constring.Open()
@@ -375,7 +454,7 @@
 
                 While reader.Read
                     If reader.HasRows Then
-                        row = New String() {reader(0), reader(1), Format(reader(2), "0.00")}
+                        row = New String() {reader(0), reader(1), Format(reader(2), "0.00"), Format(reader(3), "0.00")}
 
                         DataGridView.Rows.Add(row)
                     End If
@@ -393,6 +472,7 @@
         lbl_event.Text = "Interview"
         populateCbCategory()
 
+        cb_category.Enabled = True
         DataGridView.Columns.Clear()
 
         Dim candidateNo As New DataGridViewTextBoxColumn
@@ -420,6 +500,7 @@
         lbl_event.Text = "Swimwear"
         populateCbCategory()
 
+        cb_category.Enabled = True
         DataGridView.Columns.Clear()
 
         Dim candidateNo As New DataGridViewTextBoxColumn
@@ -446,7 +527,19 @@
     Private Sub FinalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FinalToolStripMenuItem.Click
         lbl_event.Text = "Final"
         populateCbCategory()
+    End Sub
 
+    Private Sub TopToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TopToolStripMenuItem.Click
+        Elimination.Owner = Me
+        Elimination.MdiParent = Me.MdiParent
+        Elimination.Show()
+    End Sub
+
+    Private Sub OverallToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OverallToolStripMenuItem.Click
+        lbl_event.Text = "Overall"
+        populateCbCategory()
+
+        cb_category.Enabled = False
         DataGridView.Columns.Clear()
 
         Dim candidateNo As New DataGridViewTextBoxColumn
@@ -468,5 +561,7 @@
         score.Name = "score"
         score.ReadOnly = True
         DataGridView.Columns.Add(score)
+
+        populateDGVOverall()
     End Sub
 End Class

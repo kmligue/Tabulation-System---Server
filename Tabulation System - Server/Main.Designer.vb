@@ -39,6 +39,8 @@ Partial Class Main
         Me.cb_category = New System.Windows.Forms.ComboBox()
         Me.lbl_event = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.OverallToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.DataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -93,7 +95,7 @@ Partial Class Main
         '
         'InquiryToolStripMenuItem
         '
-        Me.InquiryToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GownToolStripMenuItem, Me.TalentToolStripMenuItem, Me.InterviewToolStripMenuItem, Me.SwimwearToolStripMenuItem, Me.FinalToolStripMenuItem})
+        Me.InquiryToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GownToolStripMenuItem, Me.TalentToolStripMenuItem, Me.InterviewToolStripMenuItem, Me.SwimwearToolStripMenuItem, Me.OverallToolStripMenuItem, Me.ToolStripMenuItem1, Me.FinalToolStripMenuItem})
         Me.InquiryToolStripMenuItem.Name = "InquiryToolStripMenuItem"
         Me.InquiryToolStripMenuItem.Size = New System.Drawing.Size(56, 20)
         Me.InquiryToolStripMenuItem.Text = "Inquiry"
@@ -101,31 +103,31 @@ Partial Class Main
         'GownToolStripMenuItem
         '
         Me.GownToolStripMenuItem.Name = "GownToolStripMenuItem"
-        Me.GownToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
+        Me.GownToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.GownToolStripMenuItem.Text = "Gown"
         '
         'TalentToolStripMenuItem
         '
         Me.TalentToolStripMenuItem.Name = "TalentToolStripMenuItem"
-        Me.TalentToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
+        Me.TalentToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.TalentToolStripMenuItem.Text = "Talent"
         '
         'InterviewToolStripMenuItem
         '
         Me.InterviewToolStripMenuItem.Name = "InterviewToolStripMenuItem"
-        Me.InterviewToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
+        Me.InterviewToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.InterviewToolStripMenuItem.Text = "Interview"
         '
         'SwimwearToolStripMenuItem
         '
         Me.SwimwearToolStripMenuItem.Name = "SwimwearToolStripMenuItem"
-        Me.SwimwearToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
+        Me.SwimwearToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SwimwearToolStripMenuItem.Text = "Swimwear"
         '
         'FinalToolStripMenuItem
         '
         Me.FinalToolStripMenuItem.Name = "FinalToolStripMenuItem"
-        Me.FinalToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
+        Me.FinalToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.FinalToolStripMenuItem.Text = "Final"
         '
         'DataGridView
@@ -168,6 +170,17 @@ Partial Class Main
         Me.Panel1.Size = New System.Drawing.Size(984, 64)
         Me.Panel1.TabIndex = 6
         '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(149, 6)
+        '
+        'OverallToolStripMenuItem
+        '
+        Me.OverallToolStripMenuItem.Name = "OverallToolStripMenuItem"
+        Me.OverallToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.OverallToolStripMenuItem.Text = "Overall"
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -209,4 +222,6 @@ Partial Class Main
     Friend WithEvents lbl_event As System.Windows.Forms.Label
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents TopToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents OverallToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripSeparator
 End Class
